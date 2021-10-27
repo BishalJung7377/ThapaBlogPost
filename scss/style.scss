@@ -1,0 +1,22 @@
+@use 'custom';
+
+// importing component sections 
+@use 'components/buttons';
+@use 'components/mixins';
+@import "./components/animations";
+@import "./components/typography"; 
+// use use garnu ra import use garnu is not much different
+
+
+
+// importing sections 
+@import "./sections/faq";
+@import "./sections/footer";
+@import "./sections/get_started";
+@import "./sections/intro-section";
+@import "./sections/navbar";
+@import "./sections/portfolio";
+@import "./sections/services";
+@import "./sections/companies";
+@import "./sections/testimonials";
+// @use "sections/testimonials";
