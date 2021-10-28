@@ -1,13 +1,8 @@
 @import "../custom";
 @import "../components/mixins";
 
-
-
-
-
 .btn-rounded {
-
-    ///mixin bata Mediaquery haleko
+  ///mixin bata Mediaquery haleko
   @include media-breakpoint-down(sm) {
     .btn-rounded {
       display: none;
@@ -51,43 +46,35 @@
 // }
 
 
-@media screen and (max-width:575.98px){
-    .btn-rounded{
-        display: none;
+
+.btn-intro-rounded {
+  position: relative;
+  font-weight: 700;
+  border: 1px solid white;
+  background-color: white;
+  padding: 1.3em 4em 1.3em 1em;
+
+  .btn-rounded-span {
+    position: absolute;
+    background-color: $primary;
+    width: 2.5em;
+    height: 2.5em;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    i {
+      color: white;
+      font-size: 1rem;
+      line-height: 2.5rem;
     }
+  }
 }
 
-
-
-.btn-intro-rounded{
-    position: relative;
-    font-weight: 700;
-    border: 1px solid white;
-    background-color: white;
-    padding: 1.3em 4em 1.3em 1em;
-    
-    .btn-rounded-span{
-        position: absolute;
-        background-color: $primary;
-        width: 2.5em;
-        height: 2.5em;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
-        border-radius: 50%;
-        i {
-            color: white;
-            font-size: 1rem;
-            line-height: 2.5rem;
-          }
-    }
-  
-}
-
-.btn-intro-rounded:hover{
-    @include GradientColor;
-
-    .btn-rounded-span{
-     background-color: rgba($color: #000000, $alpha: 1.0);   
-    }
+.btn-intro-rounded:hover {
+  @include GradientColor;
+  color: white;
+  .btn-rounded-span {
+    background-color: rgba($color: #000000, $alpha: 1);
+  }
 }

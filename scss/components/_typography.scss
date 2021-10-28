@@ -16,5 +16,62 @@
     margin: 1.2em 0;
     text-transform: none;
     font-size: 1.2rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      display: inline-block;
+    }
   }
 }
+
+.display-3 {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 1rem;
+
+  &--title {
+    font-size: 1.2rem;
+    color: $primary;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    background-clip: text;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+
+    @include media-breakpoint-up(lg){
+      font-size: 1.8rem;
+    }
+  }
+}
+// heading line
+
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $primary;
+}
+.heading-line::after {
+  content: "";
+  width: 1.9rem;
+  margin: 0 auto;
+  padding: 0.2rem 0;
+  height: 0.2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  background-color: $primary;
+}
+
+///border right
+
+.border-right {
+  border-right: 0.5rem solid $gray-500;
+  height: 100%;
+}
+
